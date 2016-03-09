@@ -1,10 +1,11 @@
-#Sifreleme ve Sifre Cozme Algoritmalari
 
-sifrelenmis = ""
-def sifreleme(user, password):
+class Sifreleme:
 
-    return sifrelenmis
+#Karakterler Arttirilacak
+    def sifrele (kripcevir):
+        kripto = {"V":"11","v":"24","*":"33"}
+        for karakter in kripto:
+            kripcevir = kripcevir.replace(karakter,kripto[karakter])
+        return kripcevir
 
-def sifreCozme(sifrelenmis):
 
-    return
