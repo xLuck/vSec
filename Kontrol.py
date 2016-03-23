@@ -27,7 +27,7 @@ def controlUSB():
     else:
 
         print("yanlis")
-       # Mail.mailyolla()
+        Mail.mailyolla()
         PCKilit.Kapa()
         time.sleep(60)
 

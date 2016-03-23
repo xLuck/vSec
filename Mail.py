@@ -1,5 +1,5 @@
 import smtplib
-
+#Mail Yollama Gelistirilecek!
 class Mail:
     def mailyolla():
         server = smtplib.SMTP('smtp.gmail.com', 587)
