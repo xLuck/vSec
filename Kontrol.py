@@ -4,6 +4,7 @@ import getpass
 import time, threading
 from Mail import *
 from PCKilit import *
+from USBHDDKontrol import *
 #Problem: Tum USB Kullanicilari icin cozum bulunmali
 try:
     shutil.copy2("/media/"+getpass.getuser()+"/A84A-7167/information.vsec", 'new')
@@ -21,20 +22,35 @@ def controlUSB():
         user = "NULL"
         print("Dosya yok")
 
-    if(acUser == user):
+    if(acUser == user ):
         print("dogru")
         #Hic birsey yapmayarak kullanima izin ver
     else:
 
+        print("yanlisUSB")
+        #Mail.mailyolla()
+       # PCKilit.Kapa()
+        time.sleep(30)
+
+
+def foo(sayiHDD):
+    sayHDD = 0
+    HDDKont = USBHDDKontrol.detect_devs(sayHDD)
+
+    if sayiHDD == HDDKont:
+        print("dogru")
+        controlUSB()
+    else:
         print("yanlis")
-        Mail.mailyolla()
-        PCKilit.Kapa()
-        time.sleep(60)
+        #Mail.mailyolla()
+       # PCKilit.Kapa()
+        time.sleep(30)
+        hddsayi=0
+        sayiHDD = USBHDDKontrol.detect_devs(hddsayi)
 
-        #PCKilit() islemi yapalicak
 
-def foo():
-   controlUSB()
-   threading.Timer(10, foo).start()
-
-foo()
+    threading.Timer(10, foo(sayiHDD)).start()
+hddsay=0
+sayiHDD=0
+sayiHDD=USBHDDKontrol.detect_devs(hddsay)
+foo(sayiHDD)
