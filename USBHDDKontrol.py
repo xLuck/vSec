@@ -4,7 +4,7 @@ from __future__ import print_function
 import glob
 import re
 import os
-import threading
+#Tamam.
 dev_pattern = ['sd.*','mmcblk*']
 class USBHDDKontrol:
 

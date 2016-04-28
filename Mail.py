@@ -1,5 +1,6 @@
 import smtplib
 #Mail Yollama Gelistirilecek!
+#Kisi Bilgileri Yolanmali Mesaj Olarak
 class Mail:
     def mailyolla():
         server = smtplib.SMTP('smtp.gmail.com', 587)
@@ -12,3 +13,4 @@ class Mail:
         msg = "\nUYARI!" # GONDERILECEK MESAJ
         server.sendmail("SistemUyari", "vedatcetin07@hotmail.com", msg)
         server.close()
+

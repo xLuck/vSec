@@ -5,7 +5,9 @@ import time, threading
 from Mail import *
 from PCKilit import *
 from USBHDDKontrol import *
-#Problem: Tum USB Kullanicilari icin cozum bulunmali
+
+#Problem: Tum USB Kullanicilari icin cozum bulunmali A84A-7167!
+#Vize de programin calismamasi cozuldu
 try:
     shutil.copy2("/media/"+getpass.getuser()+"/A84A-7167/information.vsec", 'new')
     dosya = open("new")
@@ -37,20 +39,20 @@ def foo(sayiHDD):
     sayHDD = 0
     HDDKont = USBHDDKontrol.detect_devs(sayHDD)
 
-    if sayiHDD == HDDKont:
+    if sayiHDDx == HDDKont:
         print("dogru")
         controlUSB()
     else:
         print("yanlis")
-        #Mail.mailyolla()
-       # PCKilit.Kapa()
+        Mail.mailyolla()
+        PCKilit.Kapa()
         time.sleep(30)
         hddsayi=0
-        sayiHDD = USBHDDKontrol.detect_devs(hddsayi)
+        HDDKont = USBHDDKontrol.detect_devs(hddsayi)
 
-
-    threading.Timer(10, foo(sayiHDD)).start()
+    time.sleep(10)
+    foo(sayiHDD)
 hddsay=0
-sayiHDD=0
-sayiHDD=USBHDDKontrol.detect_devs(hddsay)
-foo(sayiHDD)
+sayiHDDx=0
+sayiHDDx=USBHDDKontrol.detect_devs(hddsay)
+foo(sayiHDDx)

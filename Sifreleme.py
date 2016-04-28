@@ -2,6 +2,7 @@
 class Sifreleme:
 
 #Sifreleme Sinifi nin sifreCozme fonk yapilacak
+
     def sifrele (kripcevir):
         kripto = {"A":"11",
                   "a":"24",
