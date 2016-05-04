@@ -4,11 +4,11 @@ from __future__ import print_function
 import glob
 import re
 import os
-#Tamam.
+#Tamamlandı!
 dev_pattern = ['sd.*','mmcblk*']
 class USBHDDKontrol:
 
-#Gelistirilecek
+
 
     def detect_devs(sayi):
 
