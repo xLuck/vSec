@@ -61,13 +61,8 @@ class Sifreleme:
             kripcevir = kripcevir.replace(karakter,kripto[karakter])
         return kripcevir
 
-#9   7   2   6   3   5
-#11  12  17  19  13
-#24  22  29  23  24
-#35  38  32  37  33
-#41  44  47  43  49
-#53  54  59  57  51 55
-#69  61  63  67  62
-#71  72  77  79  73
-#89  87  83  85  82
-#93  96  95  97  91
+    def desifre(kripcoz):
+        kriptoCoz = {}
+        for karakter in kriptoCoz:
+            kripcoz = kripcoz.replace(karakter,kriptoCoz[karakter])
+        return kripcevir
