@@ -5,6 +5,7 @@ import time, threading
 from Mail import *
 from PCKilit import *
 from USBHDDKontrol import *
+from Sifreleme import *
 
 #Problem: Tum USB Kullanicilari icin cozum bulunmali A84A-7167!
 #Vize de programin calismamasi cozuldu
@@ -32,7 +33,7 @@ def controlUSB():
         print("yanlisUSB")
         #Mail.mailyolla()
         #calisanUygulamalari = calisanUygulamalar.uygulamalariListele()
-        #Mail.mailyolla(user,calisanUygulamalar)
+        #Mail.mailyolla(Sifreleme.desifre(user),calisanUygulamalar)
        # PCKilit.Kapa()
         time.sleep(30)
 
