@@ -31,7 +31,7 @@ def controlUSB():
 
         print("yanlisUSB")
         #Mail.mailyolla()
-        #calisanUygulamalar.calisanUygulamalar()
+        #calisanUygulamalari = calisanUygulamalar.uygulamalariListele()
         #Mail.mailyolla(user,calisanUygulamalar)
        # PCKilit.Kapa()
         time.sleep(30)
