@@ -114,7 +114,7 @@ class Sifreleme:
                   "73":"y",
                   "5":"Z",
                   "55":"z",
-                  "33":"*"}
+                  "33":" "}
         for karakter in kriptoCoz:
             kripcoz = kripcoz.replace(karakter,kriptoCoz[karakter])
         return kripcevir
