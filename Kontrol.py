@@ -31,6 +31,8 @@ def controlUSB():
 
         print("yanlisUSB")
         #Mail.mailyolla()
+        #calisanUygulamalar.calisanUygulamalar()
+        #Mail.mailyolla(user,calisanUygulamalar)
        # PCKilit.Kapa()
         time.sleep(30)
 
@@ -44,8 +46,10 @@ def foo(sayiHDD):
         controlUSB()
     else:
         print("yanlis")
-        Mail.mailyolla()
-        PCKilit.Kapa()
+        #Mail.mailyolla()
+        #calisanUygulamalar.calisanUygulamalar()
+        #Mail.mailyolla(user,calisanUygulamalar)
+        #PCKilit.Kapa()
         time.sleep(30)
         hddsayi=0
         HDDKont = USBHDDKontrol.detect_devs(hddsayi)
