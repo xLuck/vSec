@@ -1,7 +1,7 @@
 
 class Sifreleme:
 
-#Sifreleme Sinifi nin sifreCozme fonk yapilacak
+#TAMAMLANDI
 
     def sifrele (kripcevir):
         kripto = {"A":"11",
@@ -62,7 +62,59 @@ class Sifreleme:
         return kripcevir
 
     def desifre(kripcoz):
-        kriptoCoz = {}
+        kriptoCoz = {"11":"A",
+                  "24":"a",
+                  "52":"B",
+                  "53":"b",
+                  "59":"C",
+                  "54":"c",
+                  "12":"D",
+                  "89":"d",
+                  "22":"E",
+                  "69":"e",
+                  "71":"F",
+                  "35":"f",
+                  "38":"G",
+                  "93":"g",
+                  "72":"H",
+                  "61":"h",
+                  "9":"I",
+                  "77":"i",
+                  "41":"J",
+                  "32":"j",
+                  "44":"K",
+                  "63":"k",
+                  "7":"L",
+                  "96":"l",
+                  "97":"M",
+                  "95":"m",
+                  "2":"N",
+                  "17":"n",
+                  "29":"O",
+                  "47":"o",
+                  "6":"P",
+                  "67":"p",
+                  "83":"R",
+                  "79":"r",
+                  "19":"S",
+                  "37":"s",
+                  "23":"T",
+                  "62":"t",
+                  "43":"U",
+                  "3":"u",
+                  "13":"V",
+                  "24":"v",
+                  "57":"Q",
+                  "85":"q",
+                  "49":"W",
+                  "97":"w",
+                  "51":"X",
+                  "82":"x",
+                  "73":"Y",
+                  "73":"y",
+                  "5":"Z",
+                  "55":"z",
+                  "33":"*"}
         for karakter in kriptoCoz:
             kripcoz = kripcoz.replace(karakter,kriptoCoz[karakter])
         return kripcevir
