@@ -1,14 +1,13 @@
 #Sistemde calışan uygulamalar hakkında bilgi edinmek için sınıf
 #Ilk arastirma
-class calisanUygulamalar
-  import os
-  def uygulamalariListele()
+import os,sys
+import subprocess
+import platform
+import shutil
 
-    pids = [pid for pid in os.listdir('/proc') if pid.isdigit()]
+class calisanUygulamalar:
 
-    for pid in pids:
-        try:
-            uygulamalar = open(os.path.join('/proc', pid, 'cmdline'), 'rb').read()
-            return uygulamar
-        except IOError: # proc has already terminated
-            continue
+    def uygulamalar():
+        os.system("top -b -n1 > /tmp/uygulamalar.log")
+        os.system("scrot screenshot.jpg")
+

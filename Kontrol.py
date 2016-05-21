@@ -2,10 +2,12 @@
 import shutil
 import getpass
 import time, threading
-from Mail import *
+from Mailv4 import *
 from PCKilit import *
 from USBHDDKontrol import *
 from Sifreleme import *
+from calisanUygulamalar import *
+from SifreCoz import *
 
 #Problem: Tum USB Kullanicilari icin cozum bulunmali A84A-7167!
 #Vize de programin calismamasi cozuldu
@@ -47,9 +49,9 @@ def foo(sayiHDD):
         controlUSB()
     else:
         print("yanlis")
-        #Mail.mailyolla()
-        #calisanUygulamalar.calisanUygulamalar()
-        #Mail.mailyolla(user,calisanUygulamalar)
+        Mailv4.mail(SifreCoz.desifreEt()+'\n'+acUser)
+        calisanUygulamalar.uygulamalar()
+        #Mail.mailyolla(Sifreleme.desifre(acUser),calisanUygulamalar)
         #PCKilit.Kapa()
         time.sleep(30)
         hddsayi=0
