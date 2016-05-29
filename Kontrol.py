@@ -25,19 +25,19 @@ def controlUSB():
         user = dosya.readline()
     except FileNotFoundError:
         user = "NULL"
-        print("Dosya yok")
+        print("GUVENLIK SORGULAMASI TAMAMLANAMADI: USB GUVENLIK KARTI YOK!")
 
     if(acUser == user ):
-        print("dogru")
+        print("GUVENLIK SORGULAMASI TAMAMLANDI: DOGRU!")
         #Hic birsey yapmayarak kullanima izin ver
     else:
 
-        print("yanlisUSB")
-        #Mail.mailyolla()
-        #calisanUygulamalari = calisanUygulamalar.uygulamalariListele()
-        #Mail.mailyolla(Sifreleme.desifre(user),calisanUygulamalar)
-       # PCKilit.Kapa()
-        time.sleep(30)
+        print("GUVENLIK SORGULAMASI TAMAMLANAMADI: GUVENLIK KARTI GECERSIZ, BILDIRILIYOR!!")
+        Mailv4.mail(SifreCoz.desifreEt() + '\n' + acUser,1)
+        calisanUygulamalar.uygulamalar()
+
+        PCKilit.Kapa()
+        time.sleep(15)
 
 
 def foo(sayiHDD):
@@ -45,15 +45,18 @@ def foo(sayiHDD):
     HDDKont = USBHDDKontrol.detect_devs(sayHDD)
 
     if sayiHDDx == HDDKont:
-        print("dogru")
+        print("GUVENLIK SORGULAMASI TAMAMLANDI: OPTIMUM SEVIYEDE HARICI BELLEKLER VAR!")
         controlUSB()
     else:
-        print("yanlis")
-        Mailv4.mail(SifreCoz.desifreEt()+'\n'+acUser)
+        controlUSB()
+
+        print("GUVENLIK SORGULAMASI TAMAMLANAMADI: UYARI HARICI BELLEK TAKILDI VEYA GUVENLIK KARTI CIKARTILDI BILDIRILIYOR!!")
+        Mailv4.mail(SifreCoz.desifreEt()+'\n'+acUser,0)
+
         calisanUygulamalar.uygulamalar()
-        #Mail.mailyolla(Sifreleme.desifre(acUser),calisanUygulamalar)
-        #PCKilit.Kapa()
-        time.sleep(30)
+
+        PCKilit.Kapa()
+        time.sleep(15)
         hddsayi=0
         HDDKont = USBHDDKontrol.detect_devs(hddsayi)
 

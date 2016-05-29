@@ -10,6 +10,12 @@ class SifreCoz:
 
         dosya = open("new")
         acUser = dosya.readline()
+        dosya = open("new2","w")
 
         sifrelenmiscikti = Sifreleme.desifre(acUser)
-        return (sifrelenmiscikti)
+        dosya.write(sifrelenmiscikti)
+        dosya.close()
+        dosya = open("new2")
+
+        desifrelenmiscikti =dosya.readline()
+        return (desifrelenmiscikti)
